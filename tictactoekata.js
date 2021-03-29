@@ -7,6 +7,7 @@ const tictactoekata = () => {
         } else {
             result += gameStep(table,roundNumber);
         }
+        console.log(result);
     }
     return result;
 };
