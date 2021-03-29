@@ -32,7 +32,7 @@
 
 :heavy_plus_sign: Horizontal win recognized  - :x:, :heavy_check_mark:, :hammer_and_pick:
 
-:heavy_plus_sign: Diagonal win recognized
+:heavy_plus_sign: Diagonal win recognized :x:, :heavy_check_mark:,
 
 :heavy_plus_sign: Draw recognized
 
