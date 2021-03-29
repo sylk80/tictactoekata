@@ -29,7 +29,7 @@ const drawTable = (table) => {
     return drawnTable;
 }
 
-let firstStep = (table) => {
+const firstStep = (table) => {
     let result = "Game board creation...";
     result += "\n";
     result += drawTable(table);
@@ -38,16 +38,31 @@ let firstStep = (table) => {
     return result;
 }
 
-let gameStep = (table, roundNumber) => {
+const gameStep = (table, roundNumber) => {
     let result = "\n";
+    let player = nextPlayer(roundNumber);
     result += "Round " + roundNumber + " : \n";
-    result += "Player " + nextPlayer(roundNumber) + " : \n";
+    result += "Player " + player + " : \n";
+    table = getNextStep(table, player);
     result += drawTable(table);
     result += "\n";
     return result;
 }
 
-let nextPlayer = (roundNumber) => {
+const getNextStep = (table, player) => {
+    let stepPlaced = 0;
+    while(stepPlaced < 1) {
+        let newX = Math.floor(Math.random() * 3);
+        let newY = Math.floor(Math.random() * 3);
+        if(table[newY][newX] === " ") {
+            table[newY][newX] = player;
+            stepPlaced++;
+        }
+    }
+    return table;
+}
+
+const nextPlayer = (roundNumber) => {
     return  roundNumber % 2 === 0 ? "O" : "X";
 }
 
