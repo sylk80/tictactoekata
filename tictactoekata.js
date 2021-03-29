@@ -1,13 +1,13 @@
 const tictactoekata = () => {
-    let result = "Game board creation...";
-    result += "\n";
+    let result = "";
     let table = [[" "," "," "],[" "," "," "],[" "," "," "]];
-    result += drawTable(table);
-    result += "Board Created."
-    result += "The game will start with Player X\n";
-    for(let roundNumber = 1 ; roundNumber < 10; roundNumber++) {
-        result += "\n";
-        result += "Round " + roundNumber + " : ";
+    for(let roundNumber = 0 ; roundNumber < 10; roundNumber++) {
+        if(roundNumber === 0) {
+            result += firstStep(table);
+        } else {
+            result += "\n";
+            result += "Round " + roundNumber + " : ";
+        }
     }
     return result;
 };
@@ -28,6 +28,15 @@ const drawTable = (table) => {
         }
     }
     return drawnTable;
+}
+
+let firstStep = (table) => {
+    let result = "Game board creation...";
+    result += "\n";
+    result += drawTable(table);
+    result += "Board Created."
+    result += "The game will start with Player X\n";
+    return result;
 }
 
 
