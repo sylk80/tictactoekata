@@ -1,5 +1,8 @@
 const tictactoekata = () => {
-    return "The game will start with Player X";
+    let result = "Game board creation...";
+    result += "\n";
+    result += "The game will start with Player X\n";
+    return result;
 };
 
 module.exports =  { tictactoekata }
