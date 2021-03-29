@@ -2,26 +2,22 @@ const tictactoekata = () => {
     let result = "";
     let table = [[" "," "," "],[" "," "," "],[" "," "," "]];
     for(let roundNumber = 0 ; roundNumber < 10; roundNumber++) {
-        if(roundNumber === 0) {
-            result += firstStep(table);
-        } else {
-            let player = nextPlayer(roundNumber);
-            table = getNextStep(table, player);
-            result += gameStep(player,table,roundNumber);
-            let winner = checkForWin(table);
-            if(winner !== null) {
-                result += "PLAYER "+ player + " WON!";
-                console.log(result);
-                break;
-            }
+        let player = nextPlayer(roundNumber);
+        table = roundNumber > 0 ? getNextStep(table, player) : table;
+        result += singleStep(roundNumber,table,player);
+        let winner = checkForWin(table);
+        if(winner !== null) {
+            result += "PLAYER "+ player + " WON!";
+            console.log(result);
+            break;
         }
-        if(roundNumber === 9) {
-            result += "GAME ENDS WITH A DRAW!"
-        }
-        console.log(result);
     }
     return result;
 };
+
+const nextPlayer = (roundNumber) => {
+    return  roundNumber % 2 === 0 ? "O" : "X";
+}
 
 const drawTable = (table) => {
     let drawnTable = "";
@@ -41,11 +37,27 @@ const drawTable = (table) => {
     return drawnTable;
 }
 
+const singleStep = (roundNumber, table, player) => {
+    let singleResult = "";
+    if(roundNumber === 0) {
+        singleResult += firstStep(table);
+    } else {
+        singleResult += gameStep(player,table,roundNumber);
+    }
+    if(roundNumber === 9) {
+        singleResult += "GAME ENDS WITH A DRAW!"
+    }
+    setTimeout(function(){
+        console.log("\nNext round : " + singleResult);
+    }, 2000 * roundNumber);
+    return singleResult;
+}
+
 const firstStep = (table) => {
     let result = "Game board creation...";
     result += "\n";
     result += drawTable(table);
-    result += "Board Created."
+    result += "Board Created.\n"
     result += "The game will start with Player X\n";
     return result;
 }
@@ -125,9 +137,7 @@ const checkForWin = (table) => {
     return winner;
 }
 
-const nextPlayer = (roundNumber) => {
-    return  roundNumber % 2 === 0 ? "O" : "X";
-}
+
 
 
 
