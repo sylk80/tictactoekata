@@ -41,5 +41,11 @@ describe('where the following should apply, that..', function() {
                 expect(result).toContain("PLAYER O WON!") ;
             }
         });
+        it(' if one player has 3 marks diagonally, the player wins', function() {
+            let result = tictactoekata();
+            if(result.indexOf("X|O| \n-+-+-\nO|X| \n-+-+-\n |O |X \n") > 0) {
+                expect(result).toContain("PLAYER X WON!") ;
+            }
+        });
     });
 });
