@@ -7,7 +7,7 @@ const tictactoekata = () => {
         } else {
             result += "\n";
             result += "Round " + roundNumber + " : \n";
-            result += "Player X : \n";
+            result += "Player " + nextPlayer(roundNumber) + " : \n";
         }
     }
     return result;
@@ -39,6 +39,11 @@ let firstStep = (table) => {
     result += "The game will start with Player X\n";
     return result;
 }
+
+let nextPlayer = (roundNumber) => {
+    return  roundNumber % 2 === 0 ? "O" : "X";
+}
+
 
 
 module.exports =  { tictactoekata }
