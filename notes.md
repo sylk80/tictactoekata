@@ -17,7 +17,7 @@
 
 :heavy_plus_sign: empty table has to be initialized  - :x:, :heavy_check_mark:, :hammer_and_pick:
 
-:heavy_plus_sign: Minimum 5 rounds have to be played
+:heavy_plus_sign: Minimum 5 rounds have to be played - :x:, :heavy_check_mark:, :hammer_and_pick:
 
 :heavy_plus_sign: X starts
 
