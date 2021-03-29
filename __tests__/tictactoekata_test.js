@@ -25,5 +25,9 @@ describe('where the following should apply, that..', function() {
             let result = tictactoekata();
             expect(result).toContain(" | | \n-+-+-\n | | \n-+-+-\n | | \n");
         });
+        it(' players place marks randomly on the board', function() {
+            let result = tictactoekata();
+            expect(result).toContain("O|") ;
+        });
     });
 });
