@@ -35,5 +35,11 @@ describe('where the following should apply, that..', function() {
                 expect(result).toContain("PLAYER X WON!") ;
             }
         });
+        it(' if one player has 3 marks vertically, the player wins', function() {
+            let result = tictactoekata();
+            if(result.indexOf("X|O| \n-+-+-\nX|O| \n-+-+-\n |O |X \n") > 0) {
+                expect(result).toContain("PLAYER O WON!") ;
+            }
+        });
     });
 });
