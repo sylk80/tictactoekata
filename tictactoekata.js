@@ -5,6 +5,10 @@ const tictactoekata = () => {
     result += drawTable(table);
     result += "Board Created."
     result += "The game will start with Player X\n";
+    for(let roundNumber = 1 ; roundNumber < 10; roundNumber++) {
+        result += "\n";
+        result += "Round " + roundNumber + " : ";
+    }
     return result;
 };
 
