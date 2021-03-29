@@ -47,5 +47,11 @@ describe('where the following should apply, that..', function() {
                 expect(result).toContain("PLAYER X WON!") ;
             }
         });
+        it(' if all 9 rounds are passed and nobody won, then it\'s a draw', function() {
+            let result = tictactoekata();
+            if(result.indexOf("Round 9") > 0 && result.indexOf("WON") < 0)  {
+                expect(result).toContain("GAME ENDS WITH A DRAW!") ;
+            }
+        });
     });
 });
