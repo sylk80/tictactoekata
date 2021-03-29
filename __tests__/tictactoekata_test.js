@@ -15,5 +15,9 @@ describe('where the following rules are true, that..', function() {
         let result = tictactoekata();
         expect(result).toContain("Round 5");
     });
+    it('Player X starts the game', function() {
+        let result = tictactoekata();
+        expect(result).toContain("Player X : ");
+    });
 });
 });
