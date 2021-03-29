@@ -26,7 +26,7 @@
 
 :heavy_plus_sign: Start with empty board  - :heavy_check_mark:, :hammer_and_pick:
 
-:heavy_plus_sign: Players place randomly
+:heavy_plus_sign: Players place randomly - :x:, :heavy_check_mark:, :hammer_and_pick:
 
 :heavy_plus_sign: Vertical win recognized
 
