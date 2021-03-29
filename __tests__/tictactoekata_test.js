@@ -7,5 +7,9 @@ describe('where the following rules are true, that..', function() {
         let result = tictactoekata();
         expect(result).toContain("Player X");
     });
+    it('an empty table is initialized at the beginning', function() {
+        let result = tictactoekata();
+        expect(result).toContain("Game board creation...");
+    });
 });
 });
