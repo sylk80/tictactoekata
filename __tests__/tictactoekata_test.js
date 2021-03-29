@@ -11,5 +11,9 @@ describe('where the following rules are true, that..', function() {
         let result = tictactoekata();
         expect(result).toContain("Game board creation...");
     });
+    it('minimum 5 rounds have to be played', function() {
+        let result = tictactoekata();
+        expect(result).toContain("Round 5");
+    });
 });
 });
