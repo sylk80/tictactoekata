@@ -15,7 +15,7 @@
 
 :heavy_plus_sign: Player X and Player 0 have to be present - :x:, :heavy_check_mark:
 
-:heavy_plus_sign: empty table has to be initialized
+:heavy_plus_sign: empty table has to be initialized  - :x:, :heavy_check_mark:, :hammer_and_pick:
 
 :heavy_plus_sign: Minimum 5 rounds have to be played
 
