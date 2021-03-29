@@ -6,7 +6,8 @@ const tictactoekata = () => {
             result += firstStep(table);
         } else {
             result += "\n";
-            result += "Round " + roundNumber + " : ";
+            result += "Round " + roundNumber + " : \n";
+            result += "Player X : \n";
         }
     }
     return result;
