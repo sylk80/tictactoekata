@@ -3,7 +3,7 @@ const tictactoekata = () => {
     let table = [[" "," "," "],[" "," "," "],[" "," "," "]];
     for(let roundNumber = 0 ; roundNumber < 10; roundNumber++) {
         let player = nextPlayer(roundNumber);
-        table = roundNumber > 0 ? getNextStep(table, player) : table;
+        table = roundNumber > 0 ? getNextMarkOnTheTable(table, player) : table;
         result += singleStep(roundNumber,table,player);
         let winner = checkForWin(table);
         if(winner !== null) {
@@ -16,7 +16,7 @@ const tictactoekata = () => {
 };
 
 const nextPlayer = (roundNumber) => {
-    return  roundNumber % 2 === 0 ? "O" : "X";
+    return roundNumber % 2 === 0 ? "O" : "X";
 }
 
 const drawTable = (table) => {
@@ -40,7 +40,7 @@ const drawTable = (table) => {
 const singleStep = (roundNumber, table, player) => {
     let singleResult = "";
     if(roundNumber === 0) {
-        singleResult += firstStep(table);
+        singleResult += initializerStep(table);
     } else {
         singleResult += gameStep(player,table,roundNumber);
     }
@@ -53,7 +53,7 @@ const singleStep = (roundNumber, table, player) => {
     return singleResult;
 }
 
-const firstStep = (table) => {
+const initializerStep = (table) => {
     let result = "Game board creation...";
     result += "\n";
     result += drawTable(table);
@@ -71,7 +71,7 @@ const gameStep = (player, table, roundNumber) => {
     return result;
 }
 
-const getNextStep = (table, player) => {
+const getNextMarkOnTheTable = (table, player) => {
     let stepPlaced = 0;
     while(stepPlaced < 1) {
         let newX = Math.floor(Math.random() * 3);
@@ -86,30 +86,38 @@ const getNextStep = (table, player) => {
 
 const checkForHorizontalWin = (table) => {
     let winner = null;
-    if(table[0][0] === table[0][1] && table[0][0] === table[0][2] && table[0][1] === table[0][2] && table[0][0] !== " " ) {
-        console.log("first row");
-        winner = table[0][0];
-    } else if(table[1][0] === table[1][1] && table[1][0] === table[1][2] && table[1][1] === table[1][2] && table[1][0] !== " ") {
-        console.log("second row");
-        winner = table[1][0];
-    } else if(table[2][0] === table[2][1] && table[2][0] === table[2][2] && table[2][1] === table[2][2] && table[2][0] !== " ") {
-        console.log("third row");
-        winner = table[2][0];
+    for(let row = 0; row < 3; row++) {
+        winner = chekRowForWin(row, table);
+        if(winner != null) {
+            break;
+        }
+    }
+    return winner;
+}
+
+const chekRowForWin = (rowNumber, table) => {
+    let winner = null;
+    if(table[rowNumber][0] === table[rowNumber][1] && table[rowNumber][0] === table[rowNumber][2] && table[rowNumber][1] === table[rowNumber][2] && table[rowNumber][0] !== " " ) {
+        winner = table[rowNumber][0];
     }
     return winner;
 }
 
 const checkForVerticalWin = (table) => {
     let winner = null;
-    if(table[0][0] === table[1][0] && table[0][0] === table[2][0] && table[1][0] === table[2][0] && table[0][0] !== " " ) {
-        console.log("first column");
-        winner = table[0][0];
-    } else if(table[0][1] === table[1][1] && table[0][1] === table[2][1] && table[1][1] === table[2][1] && table[0][1] !== " ") {
-        console.log("second column");
-        winner = table[0][1];
-    } else if(table[0][2] === table[1][2] && table[0][2] === table[2][2] && table[1][2] === table[2][2] && table[0][2] !== " ") {
-        console.log("third column");
-        winner = table[0][2];
+    for(let column = 0; column < 3; column++) {
+        winner = checkForColumnWin(column, table);
+        if(winner != null) {
+            break;
+        }
+    }
+    return winner;
+}
+
+const checkForColumnWin = (columnNumber, table) => {
+    let winner = null;
+    if(table[0][columnNumber] === table[1][columnNumber] && table[0][columnNumber] === table[2][columnNumber] && table[1][columnNumber] === table[2][columnNumber] && table[0][columnNumber] !== " " ) {
+        winner = table[0][columnNumber];
     }
     return winner;
 }
@@ -117,10 +125,8 @@ const checkForVerticalWin = (table) => {
 const checkForDiagonalWin = (table) => {
     let winner = null;
     if(table[0][0] === table[1][1] && table[0][0] === table[2][2] && table[1][1] === table[2][2] && table[0][0] !== " " ) {
-        console.log("left to right");
         winner = table[0][0];
     } else if(table[0][2] === table[1][1] && table[0][2] === table[2][0] && table[1][1] === table[2][0] && table[0][2] !== " ") {
-        console.log("right to left");
         winner = table[0][2];
     }
     return winner;
@@ -136,8 +142,6 @@ const checkForWin = (table) => {
     }
     return winner;
 }
-
-
 
 
 
