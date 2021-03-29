@@ -8,3 +8,35 @@
 :hammer_and_pick: - refactor
 
 :warning: - TD?
+
+#Tic-tac-toe kata
+
+:dart: Guardians
+
+:heavy_plus_sign: Player X and Player 0 have to be present
+
+:heavy_plus_sign: empty table has to be initialized
+
+:heavy_plus_sign: Minimum 5 rounds have to be played
+
+:heavy_plus_sign: X starts
+
+
+:dart: Boundaries
+
+:heavy_plus_sign: Start with empty board
+
+:heavy_plus_sign: Players place randomly
+
+:heavy_plus_sign: Vertical win recognized
+
+:heavy_plus_sign: Horizontal win recognized
+
+:heavy_plus_sign: Diagonal win recognized
+
+:heavy_plus_sign: Draw recognized
+
+
+:dart: Algorithm
+
+:heavy_plus_sign: 2 seconds timeout between rounds
