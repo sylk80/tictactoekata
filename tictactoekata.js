@@ -10,7 +10,8 @@ const tictactoekata = () => {
             result += gameStep(player,table,roundNumber);
             let winner = checkForHorizontalWin(table);
             if(winner !== null) {
-                result += "PLAYER "+ player + " WON!"
+                result += "PLAYER "+ player + " WON!";
+                break;
             }
         }
         console.log(result);
@@ -69,12 +70,12 @@ const getNextStep = (table, player) => {
 
 const checkForHorizontalWin = (table) => {
     let winner = null;
-    if(table[0][0] === table[0][1] && table[0][1] === table[0][2]) {
+    if(table[0][0] !== " " && table[0][0] === table[0][1] && table[0][1] === table[0][2]) {
         winner = table[0][0];
-    } else if(table[1][0] === table[1][1] && table[1][1] === table[1][2]) {
-        winner =  table[0][0];
-    } else if(table[2][0] === table[2][1] && table[2][1] === table[2][2]) {
-        winner =  table[0][0];
+    } else if(table[1][0] !== " " && table[1][0] === table[1][1] && table[1][1] === table[1][2]) {
+        winner = table[1][0];
+    } else if(table[2][0] !== " " && table[2][0] === table[2][1] && table[2][1] === table[2][2]) {
+        winner = table[2][0];
     }
     return winner;
 }
