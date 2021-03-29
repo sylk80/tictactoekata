@@ -5,9 +5,7 @@ const tictactoekata = () => {
         if(roundNumber === 0) {
             result += firstStep(table);
         } else {
-            result += "\n";
-            result += "Round " + roundNumber + " : \n";
-            result += "Player " + nextPlayer(roundNumber) + " : \n";
+            result += gameStep(table,roundNumber);
         }
     }
     return result;
@@ -37,6 +35,15 @@ let firstStep = (table) => {
     result += drawTable(table);
     result += "Board Created."
     result += "The game will start with Player X\n";
+    return result;
+}
+
+let gameStep = (table, roundNumber) => {
+    let result = "\n";
+    result += "Round " + roundNumber + " : \n";
+    result += "Player " + nextPlayer(roundNumber) + " : \n";
+    result += drawTable(table);
+    result += "\n";
     return result;
 }
 
