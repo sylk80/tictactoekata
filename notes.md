@@ -34,7 +34,7 @@
 
 :heavy_plus_sign: Diagonal win recognized :x:, :heavy_check_mark:,
 
-:heavy_plus_sign: Draw recognized
+:heavy_plus_sign: Draw recognized   - :x:, :heavy_check_mark:, :hammer_and_pick:
 
 
 :dart: Algorithm
