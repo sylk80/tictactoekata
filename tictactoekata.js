@@ -14,6 +14,12 @@ const tictactoekata = () => {
                 console.log(result);
                 break;
             }
+            winner = checkForVerticalWin(table);
+            if(winner !== null) {
+                result += "PLAYER "+ player + " WON!";
+                console.log(result);
+                break;
+            }
         }
         console.log(result);
     }
@@ -80,6 +86,21 @@ const checkForHorizontalWin = (table) => {
     } else if(table[2][0] === table[2][1] && table[2][0] === table[2][2] && table[2][1] === table[2][2] && table[2][0] !== " ") {
         console.log("third row");
         winner = table[2][0];
+    }
+    return winner;
+}
+
+const checkForVerticalWin = (table) => {
+    let winner = null;
+    if(table[0][0] === table[1][0] && table[0][0] === table[2][0] && table[1][0] === table[2][0] && table[0][0] !== " " ) {
+        console.log("first column");
+        winner = table[0][0];
+    } else if(table[0][1] === table[1][1] && table[0][1] === table[2][1] && table[1][1] === table[2][1] && table[0][1] !== " ") {
+        console.log("second column");
+        winner = table[0][1];
+    } else if(table[0][2] === table[1][2] && table[0][2] === table[2][2] && table[1][2] === table[2][2] && table[0][2] !== " ") {
+        console.log("third column");
+        winner = table[0][2];
     }
     return winner;
 }
