@@ -13,7 +13,7 @@
 
 :dart: Guardians
 
-:heavy_plus_sign: Player X and Player 0 have to be present
+:heavy_plus_sign: Player X and Player 0 have to be present - :x:, :heavy_check_mark:
 
 :heavy_plus_sign: empty table has to be initialized
 
