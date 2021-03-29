@@ -54,4 +54,10 @@ describe('where the following should apply, that..', function() {
             }
         });
     });
+    describe('implemented in the following way, that... ', function() {
+        it(' it adds rounds periodically', async () => {
+            let result = await tictactoekata();
+            expect(result).toContain("Next round is:");
+        });
+    });
 });
