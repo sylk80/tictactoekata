@@ -20,4 +20,10 @@ describe('where the following should apply, that..', function() {
         expect(result).toContain("Player X : ");
     });
 });
+    describe('where the game play is possible, that..', function() {
+        it(' it starts with an empty board', function() {
+            let result = tictactoekata();
+            expect(result).toContain(" | | \n-+-+-\n | | \n-+-+-\n | | \n");
+        });
+    });
 });
