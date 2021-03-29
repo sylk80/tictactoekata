@@ -27,6 +27,9 @@ const tictactoekata = () => {
                 break;
             }
         }
+        if(roundNumber === 9) {
+            result += "GAME ENDS WITH A DRAW!"
+        }
         console.log(result);
     }
     return result;
