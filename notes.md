@@ -40,3 +40,10 @@
 :dart: Algorithm
 
 :heavy_plus_sign: 2 seconds timeout between rounds  - :x:, :heavy_check_mark:, :hammer_and_pick:
+
+
+:warning: Need to learn how to test async events
+
+:warning: The test don't cover every event, since the events are random
+
+:warning: Create a test event generator, which can generate all the possible wining combinations
