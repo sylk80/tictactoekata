@@ -30,7 +30,7 @@
 
 :heavy_plus_sign: Vertical win recognized
 
-:heavy_plus_sign: Horizontal win recognized
+:heavy_plus_sign: Horizontal win recognized  - :x:, :heavy_check_mark:, :hammer_and_pick:
 
 :heavy_plus_sign: Diagonal win recognized
 
