@@ -20,7 +20,7 @@ describe('where the following should apply, that..', function() {
         expect(result).toContain("Player X : ");
     });
 });
-    describe('where the game play is possible, that..', function() {
+    describe('where the game play is the follwoing: ', function() {
         it(' it starts with an empty board', function() {
             let result = tictactoekata();
             expect(result).toContain(" | | \n-+-+-\n | | \n-+-+-\n | | \n");
@@ -28,6 +28,12 @@ describe('where the following should apply, that..', function() {
         it(' players place marks randomly on the board', function() {
             let result = tictactoekata();
             expect(result).toContain("O|") ;
+        });
+        it(' if one player has 3 marks horizontally, the player wins', function() {
+            let result = tictactoekata();
+            if(result.indexOf("X|X|X") > 0) {
+                expect(result).toContain("PLAYER X WON!") ;
+            }
         });
     });
 });
