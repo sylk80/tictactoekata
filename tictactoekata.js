@@ -7,7 +7,6 @@ const tictactoekata = () => {
         result += singleStep(roundNumber,table,player);
         let winner = checkForWin(table);
         if(winner !== null) {
-            result += "PLAYER "+ player + " WON!";
             console.log(result);
             break;
         }
@@ -46,6 +45,11 @@ const singleStep = (roundNumber, table, player) => {
     }
     if(roundNumber === 9) {
         singleResult += "GAME ENDS WITH A DRAW!"
+    } else {
+        let winner = checkForWin(table);
+        if(winner !== null) {
+            singleResult += "PLAYER "+ player + " WON!";
+        }
     }
     setTimeout(function(){
         console.log("\nNext round : " + singleResult);
@@ -54,7 +58,8 @@ const singleStep = (roundNumber, table, player) => {
 }
 
 const initializerStep = (table) => {
-    let result = "Game board creation...";
+    let result = "\n";
+    result += "Game board creation...";
     result += "\n";
     result += drawTable(table);
     result += "Board Created.\n"
