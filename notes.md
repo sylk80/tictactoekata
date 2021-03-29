@@ -39,4 +39,4 @@
 
 :dart: Algorithm
 
-:heavy_plus_sign: 2 seconds timeout between rounds
+:heavy_plus_sign: 2 seconds timeout between rounds  - :x:, :heavy_check_mark:, :hammer_and_pick:
