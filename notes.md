@@ -1,3 +1,11 @@
+
+[![Build Status](https://travis-ci.com/sylk80/tictactoekata.svg?branch=master)](https://travis-ci.com/sylk80/tictactoekata)|
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sylk80_tictactoekata&metric=alert_status)](https://sonarcloud.io/dashboard?id=sylk80_tictactoekata)|
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sylk80_tictactoekata&metric=bugs)](https://sonarcloud.io/dashboard?id=sylk80_tictactoekata)|
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=sylk80_tictactoekata&metric=code_smells)](https://sonarcloud.io/dashboard?id=sylk80_tictactoekata)|
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=sylk80_tictactoekata&metric=coverage)](https://sonarcloud.io/dashboard?id=sylk80_tictactoekata)|
+
+
 :heavy_check_mark: / :green_circle:  - green test
 
 :x: / :red_circle: - failing test
