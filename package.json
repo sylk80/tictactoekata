@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "coverage": "jest --coverage",
     "start": "npx run-func tictactoekata.js tictactoekata"
   },
   "keywords": [],
