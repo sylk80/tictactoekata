@@ -23,8 +23,7 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/__tests__/",
-      "/coverage/",
-      "*.json","*.md","*.yml",".*"
+      "/coverage/"
     ]
   }
 }
