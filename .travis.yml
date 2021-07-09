@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 12
+
+env:
+
+
+before_install:
+  - npm i -g npm@7.12.1
+script:
+  - npm test
+  - npm run lint
