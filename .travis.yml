@@ -12,6 +12,7 @@ addons:
 before_install:
   - npm i -g npm@7.12.1
 script:
-  - npm coverage
+  - npm test
+  - npm run coverage
 #  - npm run lint
   - sonar-scanner
