@@ -22,7 +22,9 @@
     "testResultsProcessor": "jest-sonar-reporter",
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "/__tests__/"
+      "/__tests__/",
+      "/coverage/",
+      "*.json","*.md","*.yml",".*"
     ]
   }
 }
